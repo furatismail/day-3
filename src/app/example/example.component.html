@@ -1,0 +1,15 @@
+<p>Search string: {{search()}}</p>
+
+<input type="text" (input)="setSearchString($event)">
+
+<ul>
+    <li *ngFor="let user of filtredUsers()">
+        {{user.name}}
+    </li>
+</ul>
+<br>
+<button (click)="addUser()">Add random user</button>
+
+{{conditionalCount()}}
+
+<br>
